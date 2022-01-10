@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: customerservice-microservice
+  labels:
+    app: customerservice-microservice
+spec:
+  containers:
+    - name: customerservice-microservice
+      image: yoghi09/customerservice-microservice
+      imagePullPolicy: IfNotPresent
+  restartPolicy: Always

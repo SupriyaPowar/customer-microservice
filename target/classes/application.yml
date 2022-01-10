@@ -1,0 +1,44 @@
+server:
+  port: 8180
+  
+  spring:
+  
+  h2:
+    console.enabled: true
+  datasource:
+    url: jdbc:h2:mem:servicedb
+    username: sa
+    password: welcome
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+    
+#  datasource:
+#    spring:
+#    datasource:
+#    url: jdbc:h2:mem:orders-db
+#    username: sa
+#    password: welcome
+#  
+#    jpa:
+#    hibernate:
+#      ddl-auto: create
+#    show-sql: true
+#    properties:
+#      hibernate:
+#        format_sql: true
+#  spring:
+#    h2:
+#      console.enabled: true
+#      console.path: /h2-console
+#      console.settings.trace: false 
+#      spring.h2.console.settings.web-allow-others: false
+#  jpa:
+#    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+#    
